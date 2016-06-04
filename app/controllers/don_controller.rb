@@ -1,0 +1,2 @@
+class DonController < ApplicationController
+end
