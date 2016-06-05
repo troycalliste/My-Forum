@@ -1,0 +1,23 @@
+!!!
+%html
+%head
+  %title Yabber
+  =stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  %link{ rel:'stylesheet', href: 'https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic',  type: 'text/css'}
+  %link{:rel => "stylesheet", :href => "https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css"}
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = csrf_meta_tags
+%body
+  %header.main_header.clearfix
+    .wrapper
+      #logo
+        %p Welcome to Yabber!
+      #buttons
+        = link_to "New Post", new_post_path
+
+  .wrapper
+    %p.notice= notice
+    %p.alert= alert
+
+  .wrapper
+    =yield
